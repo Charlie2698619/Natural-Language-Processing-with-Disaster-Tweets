@@ -30,6 +30,8 @@ import seaborn as sns
 # load the data
 train_df = pd.read_csv('C:\\Users\\tony3\\Desktop\\nlp-getting-started\\train.csv')
 test_df  = pd.read_csv('C:\\Users\\tony3\\Desktop\\nlp-getting-started\\test.csv')
+test_ids = test_df['id']
+
 
 #Data Preprocessing
 #=============================================================================================================
@@ -223,10 +225,10 @@ plot_confusion_matrix(y_test, y_pred)
 
 #=============================================================================================================
 # make predictions on the test set
-test_pred = pipeline.predict(test_df['text'])
+test_pred = pipeline.predict(test_vectors)
 
 # create a submission file
-submission = pd.DataFrame({'id': test_df['id'], 'target' : test_pred})
+submission = pd.DataFrame({'id': test_ids, 'target' : test_pred})
 submission.to_csv('submission.csv', index=False)
 
 # print the first 5 rows of the submission file
