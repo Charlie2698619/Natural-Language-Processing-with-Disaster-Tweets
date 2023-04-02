@@ -237,3 +237,17 @@ print(submission.head())
 # print the directory where the submission file is saved
 print(os.getcwd())
 
+# # output
+# Accuracy: 0.8115561391989494
+#  Classification Report:               precision    recall  f1-score   support
+#
+#            0       0.81      0.87      0.84       874
+#            1       0.81      0.73      0.77       649
+#
+#     accuracy                           0.81      1523
+#    macro avg       0.81      0.80      0.80      1523
+# weighted avg       0.81      0.81      0.81      1523
+#
+#  Confusion Matrix: [[760 114]
+#  [173 476]]
+#  f1-score: 0.7683615819209041
