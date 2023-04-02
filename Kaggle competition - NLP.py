@@ -222,17 +222,16 @@ def plot_confusion_matrix(y_test, y_pred):
 plot_confusion_matrix(y_test, y_pred)
 
 #=============================================================================================================
-# # make predictions on the test set
-# test_pred = pipeline.predict(test_df['text'])
-#
-# # create a submission file
-# submission = pd.DataFrame({'id': test_df['id'], 'target' : test_pred})
-# submission.to_csv('submission.csv', index=False)
-#
-# # print the first 5 rows of the submission file
-# print(submission.head())
-#
-# # print the directory where the submission file is saved
-# print(os.getcwd())
-#
-#
+# make predictions on the test set
+test_pred = pipeline.predict(test_df['text'])
+
+# create a submission file
+submission = pd.DataFrame({'id': test_df['id'], 'target' : test_pred})
+submission.to_csv('submission.csv', index=False)
+
+# print the first 5 rows of the submission file
+print(submission.head())
+
+# print the directory where the submission file is saved
+print(os.getcwd())
+
