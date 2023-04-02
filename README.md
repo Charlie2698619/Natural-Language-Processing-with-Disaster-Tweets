@@ -1,2 +1,2 @@
 # Projects
-# personal projects from Kaggle competition 
+personal projects from Kaggle competition 
